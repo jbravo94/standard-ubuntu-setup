@@ -2,6 +2,7 @@
 - name: Check if docker exists
   shell: which docker
   register: docker_exists
+  ignore_errors: true
 
 - name: Install Docker
   shell: curl -fsSL https://get.docker.com -o get-docker.sh && sh get-docker.sh
