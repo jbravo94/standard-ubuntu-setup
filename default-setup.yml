@@ -1,0 +1,16 @@
+---
+- name: Setup Default Environment
+  hosts: all
+  become: yes
+  become_method: sudo
+  
+  vars_prompt:
+    - name: ansible_ssh_pass
+      prompt: ssh password
+
+    - name: ansible_sudo_pass
+      prompt: sudo password
+      
+  roles:
+    - docker
+    - users

@@ -1,0 +1,16 @@
+- name: Add the users
+  user:
+    name: "{{ item.username }}"
+    password: "{{ 'ChangeMe.123' | password_hash('sha512') }}"
+    update_password: on_create
+    shell: /bin/bash
+    groups: sudo,docker
+    append: yes
+  with_items: "{{ ssh_users }}"
+
+- name: Add ssh keys
+  authorized_key:
+    user: "{{ item.username }}"
+    state: present
+    key: "{{ item.ssh_key }}"
+  with_items: "{{ ssh_users }}"

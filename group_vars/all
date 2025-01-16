@@ -1,0 +1,6 @@
+ansible_connection: ssh 
+ansible_ssh_user: ubuntu
+
+ssh_users:
+  - username: "heijadmin"
+    ssh_key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC0obzvxP5Dxg9r9VxtZlRsGy7rikcv7r3Htk3Suc3Kjc932VvQd3DBBqd8D7S5Cw34iiCjCwNW5LAtunNKSUhoskXdmt9GJRPUzILXPY0arfHVA9ZgJHhdK3znRkXYG0Y0rDRpeQTMCLfBErETiDtiq4/MuuLLHcw3mMBp8brZdpE88FHqDXFyVwnH5umylzG2eLF8FofVJkNnS7cXqUadOH57JiT7W9turUBRqMvTPTcx6XZpsvKIdx387RVgHpSZWF3/jS5Z9V5bRem0WOGCLMqTt+mMQcBhB8cZpBjdiheEABueywMKuAVnZYFLL6nBKhuyv1GaxryZUktSPQ6/ heij@AT-VIE-VMS-L264"
